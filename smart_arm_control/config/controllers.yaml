@@ -1,0 +1,155 @@
+smart_arm_state_controller:
+  type: "joint_state_controller/JointStateController"
+  publish_rate: 100 
+
+
+wrist_position_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - wrist_joint
+    - wrist_lower_joint
+    - wrist_middle_joint
+    - wrist_upper_joint
+  
+  gains:
+    wrist_joint : {p : 100, d : 0.5, i : 0, i_clamp : 1}
+    wrist_lower_joint : {p : 100, d : 0.5, i : 0, i_clamp : 1}
+    wrist_middle_joint : {p : 100, d : 5, i : 0, i_clamp : 1}
+    wrist_upper_joint : {p : 100, d : 5, i : 0, i_clamp : 1}
+
+  constraints:
+    goal_time: 0.6
+    stopped_velocity_tolerance: 0.02 # Override default
+    gripper_right_joint:
+      trajectory: 0.5               # Not enforced if unspecified
+      goal: 0.2                     # Not enforced if unspecified
+
+  state_publish_rate:  25            # Override default
+  action_monitor_rate: 30            # Override default
+  stop_trajectory_duration: 0        # Override default
+  allow_partial_joints_goal: true    # Default - false
+
+
+
+pinky_position_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - pinky_1_joint
+    - pinky_2_joint
+    - pinky_3_joint
+  
+  gains:
+    pinky_1_joint : {p : 100, d : 0.5, i : 0, i_clamp : 1}
+    pinky_2_joint : {p : 100, d : 0.5, i : 0, i_clamp : 1}
+    pinky_3_joint : {p : 100, d : 0.5, i : 0, i_clamp : 1}
+
+  constraints:
+    goal_time: 0.6
+    stopped_velocity_tolerance: 0.02 # Override default
+    gripper_right_joint:
+      trajectory: 0.5               # Not enforced if unspecified
+      goal: 0.2                     # Not enforced if unspecified
+
+  state_publish_rate:  25            # Override default
+  action_monitor_rate: 30            # Override default
+  stop_trajectory_duration: 0        # Override default
+  allow_partial_joints_goal: true    # Default - false
+
+
+
+ring_position_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - ring_1_joint
+    - ring_2_joint
+    - ring_3_joint
+  
+  gains:
+    ring_1_joint : {p : 100, d : 0.5, i : 0, i_clamp : 1}
+    ring_2_joint : {p : 100, d : 0.5, i : 0, i_clamp : 1}
+    ring_3_joint : {p : 100, d : 0.5, i : 0, i_clamp : 1}
+
+  constraints:
+    goal_time: 0.6
+    stopped_velocity_tolerance: 0.02 # Override default
+    gripper_right_joint:
+      trajectory: 0.5               # Not enforced if unspecified
+      goal: 0.2                     # Not enforced if unspecified
+
+  state_publish_rate:  25            # Override default
+  action_monitor_rate: 30            # Override default
+  stop_trajectory_duration: 0        # Override default
+  allow_partial_joints_goal: true    # Default - false
+
+
+middle_position_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - middle_1_joint
+    - middle_2_joint
+    - middle_3_joint
+  
+  gains:
+    middle_1_joint : {p : 100, d : 0.5, i : 0, i_clamp : 1}
+    middle_2_joint : {p : 100, d : 0.5, i : 0, i_clamp : 1}
+    middle_3_joint : {p : 100, d : 0.5, i : 0, i_clamp : 1}
+
+  constraints:
+    goal_time: 0.6
+    stopped_velocity_tolerance: 0.02 # Override default
+    gripper_right_joint:
+      trajectory: 0.5               # Not enforced if unspecified
+      goal: 0.2                     # Not enforced if unspecified
+
+  state_publish_rate:  25            # Override default
+  action_monitor_rate: 30            # Override default
+  stop_trajectory_duration: 0        # Override default
+  allow_partial_joints_goal: true    # Default - false
+
+
+pointer_position_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - pointer_1_joint
+    - pointer_2_joint
+    - pointer_3_joint
+  
+  gains:
+    pointer_1_joint : {p : 100, d : 0.5, i : 0, i_clamp : 1}
+    pointer_2_joint : {p : 100, d : 0.5, i : 0, i_clamp : 1}
+    pointer_3_joint : {p : 100, d : 0.5, i : 0, i_clamp : 1}
+
+  constraints:
+    goal_time: 0.6
+    stopped_velocity_tolerance: 0.02 # Override default
+    gripper_right_joint:
+      trajectory: 0.5               # Not enforced if unspecified
+      goal: 0.2                     # Not enforced if unspecified
+
+  state_publish_rate:  25            # Override default
+  action_monitor_rate: 30            # Override default
+  stop_trajectory_duration: 0        # Override default
+  allow_partial_joints_goal: true    # Default - false
+
+
+thumb_position_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - thumb_1_joint
+    - thumb_2_joint
+  
+  gains:
+    thumb_1_joint : {p : 100, d : 0.5, i : 0, i_clamp : 1}
+    thumb_2_joint : {p : 100, d : 0.5, i : 0, i_clamp : 1}
+
+  constraints:
+    goal_time: 0.6
+    stopped_velocity_tolerance: 0.02 # Override default
+    gripper_right_joint:
+      trajectory: 0.5               # Not enforced if unspecified
+      goal: 0.2                     # Not enforced if unspecified
+
+  state_publish_rate:  25            # Override default
+  action_monitor_rate: 30            # Override default
+  stop_trajectory_duration: 0        # Override default
+  allow_partial_joints_goal: true    # Default - false

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot name="smart_arm"  xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- transmission definition -->
+    <xacro:macro name="smart_arm_transmission" params="joint_name">
+    <transmission name="${joint_name}_transmission">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="${joint_name}">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="${joint_name}-actuator">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    </xacro:macro>
+
+
+</robot>
