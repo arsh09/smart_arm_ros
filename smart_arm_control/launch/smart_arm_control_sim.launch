@@ -37,10 +37,7 @@
   <node name="smart_arm_rqt_joint_trajectory_controller" pkg="rqt_joint_trajectory_controller" type="rqt_joint_trajectory_controller" respawn="false" output="screen">
   </node>
 
-
-  <node name="smart_arm_rviz_node" pkg="rviz" type="rviz" respawn="false" output="screen" args=" -d '$(find smart_arm_control)/config/smart_arm_rviz.rviz'">
-  </node>
-  
-
+  <!-- <node name="smart_arm_rviz_node" pkg="rviz" type="rviz" respawn="false" output="screen" args=" -d '$(find smart_arm_control)/config/smart_arm_rviz.rviz'">
+  </node> -->
 
 </launch>

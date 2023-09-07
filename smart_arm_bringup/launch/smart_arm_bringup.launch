@@ -1,0 +1,17 @@
+<launch>
+
+    <!-- launch sim controller -->
+    <include file="$(find smart_arm_control)/launch/smart_arm_control_sim.launch">
+    </include>
+    
+    <!-- launch moveit  -->
+    <include file="$(find smart_arm_moveit)/launch/move_group.launch">
+    </include>
+
+    <!-- launch rviz -->
+    <include file="$(find smart_arm_moveit)/launch/moveit_rviz.launch" >
+    </include>
+    
+
+
+</launch>

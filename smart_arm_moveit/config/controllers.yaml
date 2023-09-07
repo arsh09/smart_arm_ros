@@ -1,0 +1,48 @@
+controller_list:
+  - name: wrist_position_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+      - wrist_joint
+      - wrist_lower_joint
+      - wrist_middle_joint
+      - wrist_upper_joint
+
+  - name: pointer_position_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+      - pointer_1_joint
+      - pointer_2_joint
+      - pointer_3_joint
+    
+  - name: middle_position_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+      - middle_1_joint
+      - middle_2_joint
+      - middle_3_joint
+    
+  - name: ring_position_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+      - ring_1_joint
+      - ring_2_joint
+      - ring_3_joint
+
+  - name: pinky_position_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+      - pinky_1_joint
+      - pinky_2_joint
+      - pinky_3_joint
+
+  - name: thumb_position_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+      - thumb_1_joint
+      - thumb_2_joint
