@@ -1,0 +1,3 @@
+[submodule "third_party/bio_ik"]
+	path = third_party/bio_ik
+	url = https://github.com/arsh09/bio_ik.git
