@@ -1,0 +1,56 @@
+controller_list:
+  - name: fake_wrist_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - wrist_joint
+      - middle_1_joint
+      - middle_2_joint
+      - middle_3_joint
+      - pointer_1_joint
+      - pointer_2_joint
+      - pointer_3_joint
+      - wrist_lower_joint
+      - pinky_1_joint
+      - pinky_2_joint
+      - pinky_3_joint
+      - wrist_middle_joint
+      - ring_1_joint
+      - ring_2_joint
+      - ring_3_joint
+      - wrist_upper_joint
+      - thumb_1_joint
+      - thumb_2_joint
+  - name: fake_pointer_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - pointer_1_joint
+      - pointer_2_joint
+      - pointer_3_joint
+  - name: fake_middle_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - middle_1_joint
+      - middle_2_joint
+      - middle_3_joint
+  - name: fake_ring_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - ring_1_joint
+      - ring_2_joint
+      - ring_3_joint
+  - name: fake_pinky_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - pinky_1_joint
+      - pinky_2_joint
+      - pinky_3_joint
+  - name: fake_thumb_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - thumb_1_joint
+      - thumb_2_joint
+initial:  # Define initial robot poses per group
+#  - group: wrist
+#    pose: home
+
+  []

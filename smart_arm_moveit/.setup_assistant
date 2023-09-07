@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: smart_arm_description
+    relative_path: urdf/smart_arm.urdf.xacro
+    xacro_args: --inorder
+  SRDF:
+    relative_path: config/smart_arm.srdf
+  CONFIG:
+    author_name: Arshad Khan
+    author_email: muhammadarshad0910@gmail.com
+    generated_timestamp: 1694127697
