@@ -781,6 +781,23 @@
       velocity="1" />
   </joint>
   
+  <joint name="wrist_upper_joint" type="revolute">
+    <origin
+      xyz="0 0.00467160843217863 0.00716947951775644"
+      rpy="0 1.48772480012052 -1.5707963267949" />
+    <parent
+      link="wrist_link" />
+    <child
+      link="wrist_upper_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="5"
+      velocity="3" />
+  </joint>
+  
   <joint name="wrist_middle_joint" type="revolute">
     <origin
       xyz="0 -0.063543 0.017875"
@@ -815,6 +832,42 @@
       velocity="5" />
   </joint>
 
+
+  <joint name="thumb_1_joint" type="revolute">
+    <origin
+      xyz="-0.041192 0.017697 -0.032051"
+      rpy="-1 0.31508 0.77256" />
+    <parent
+      link="wrist_upper_link" />
+    <child
+      link="thumb_1_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="5"
+      velocity="4" />
+  </joint>
+
+  <joint name="thumb_2_joint" type="revolute">
+    <origin
+      xyz="-0.000865682899112985 0.0214109109835155 0.0182563649065549"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_1_link" />
+    <child
+      link="thumb_2_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="5"
+      velocity="4" />
+  </joint>
+
+  
   <joint name="pinky_1_joint" type="revolute">
     <origin
       xyz="-0.043751 0.0091577 0.05009"
@@ -918,56 +971,7 @@
       velocity="2" />
   </joint>
 
-  <joint name="wrist_upper_joint" type="revolute">
-    <origin
-      xyz="0 0.00467160843217863 0.00716947951775644"
-      rpy="0 1.48772480012052 -1.5707963267949" />
-    <parent
-      link="wrist_link" />
-    <child
-      link="wrist_upper_link" />
-    <axis
-      xyz="-1 0 0" />
-    <limit
-      lower="-1"
-      upper="1"
-      effort="5"
-      velocity="3" />
-  </joint>
 
-  <joint name="thumb_1_joint" type="revolute">
-    <origin
-      xyz="-0.041192 0.017697 -0.032051"
-      rpy="-1 0.31508 0.77256" />
-    <parent
-      link="wrist_upper_link" />
-    <child
-      link="thumb_1_link" />
-    <axis
-      xyz="1 0 0" />
-    <limit
-      lower="-1"
-      upper="1"
-      effort="5"
-      velocity="4" />
-  </joint>
-
-  <joint name="thumb_2_joint" type="revolute">
-    <origin
-      xyz="-0.000865682899112985 0.0214109109835155 0.0182563649065549"
-      rpy="0 0 0" />
-    <parent
-      link="thumb_1_link" />
-    <child
-      link="thumb_2_link" />
-    <axis
-      xyz="1 0 0" />
-    <limit
-      lower="-1"
-      upper="1"
-      effort="5"
-      velocity="4" />
-  </joint>
 
   <joint name="middle_1_joint" type="revolute">
     <origin
