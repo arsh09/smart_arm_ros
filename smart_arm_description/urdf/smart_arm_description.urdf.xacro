@@ -762,7 +762,10 @@
   </link>
 
 
-
+  <xacro:property name="very_small_limit" value="-0.1"/>
+  <xacro:property name="proximal_finger_joint_limit" value="1.5707"/>
+  <xacro:property name="middle_finger_joint_limit" value="1.3707"/>
+  <xacro:property name="distal_finger_joint_limit" value="1.2707"/>
 
   <joint name="wrist_joint" type="revolute">
     <origin
@@ -844,8 +847,8 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="0.8720"
       effort="5"
       velocity="4" />
   </joint>
@@ -861,13 +864,13 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="1.39626"
       effort="5"
       velocity="4" />
   </joint>
 
-  
+
   <joint name="pinky_1_joint" type="revolute">
     <origin
       xyz="-0.043751 0.0091577 0.05009"
@@ -877,10 +880,10 @@
     <child
       link="pinky_1_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="${proximal_finger_joint_limit}"
       effort="5"
       velocity="2" />
   </joint>
@@ -894,10 +897,10 @@
     <child
       link="pinky_2_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="${middle_finger_joint_limit}"
       effort="5"
       velocity="3" />
   </joint>
@@ -911,13 +914,15 @@
     <child
       link="pinky_3_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="${distal_finger_joint_limit}"
       effort="5"
       velocity="2" />
   </joint>
+
+
 
 
   <joint name="ring_1_joint" type="revolute">
@@ -929,10 +934,10 @@
     <child
       link="ring_1_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="${proximal_finger_joint_limit}"
       effort="5"
       velocity="2" />
   </joint>
@@ -946,10 +951,10 @@
     <child
       link="ring_2_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="${middle_finger_joint_limit}"
       effort="5"
       velocity="2" />
   </joint>
@@ -963,10 +968,10 @@
     <child
       link="ring_3_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="${distal_finger_joint_limit}"
       effort="5"
       velocity="2" />
   </joint>
@@ -982,10 +987,10 @@
     <child
       link="middle_1_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="${proximal_finger_joint_limit}"
       effort="5"
       velocity="5" />
   </joint>
@@ -999,10 +1004,10 @@
     <child
       link="middle_2_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="${middle_finger_joint_limit}"
       effort="5"
       velocity="4" />
   </joint>
@@ -1016,13 +1021,15 @@
     <child
       link="middle_3_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="${distal_finger_joint_limit}"
       effort="4"
       velocity="5" />
   </joint>
+
+
 
   <joint name="pointer_1_joint" type="revolute">
     <origin
@@ -1033,10 +1040,10 @@
     <child
       link="pointer_1_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="${proximal_finger_joint_limit}"
       effort="5"
       velocity="2" />
   </joint>
@@ -1050,10 +1057,10 @@
     <child
       link="pointer_2_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="${middle_finger_joint_limit}"
       effort="5"
       velocity="3" />
   </joint>
@@ -1067,10 +1074,10 @@
     <child
       link="pointer_3_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="${distal_finger_joint_limit}"
       effort="5"
       velocity="2" />
   </joint>
