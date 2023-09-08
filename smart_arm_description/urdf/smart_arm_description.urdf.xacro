@@ -776,10 +776,10 @@
     <child
       link="wrist_link" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 1 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="-0.872665"
+      upper="0.872665"
       effort="5"
       velocity="1" />
   </joint>
@@ -793,10 +793,10 @@
     <child
       link="wrist_upper_link" />
     <axis
-      xyz="-1 0 0" />
+      xyz="1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="0.872665"
       effort="5"
       velocity="3" />
   </joint>
@@ -812,8 +812,8 @@
     <axis
       xyz="-1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="${-very_small_limit}"
       effort="5"
       velocity="2" />
   </joint>
@@ -829,11 +829,13 @@
     <axis
       xyz="-1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="${very_small_limit}"
+      upper="${-very_small_limit}"
       effort="5"
       velocity="5" />
   </joint>
+
+
 
 
   <joint name="thumb_1_joint" type="revolute">
@@ -869,6 +871,8 @@
       effort="5"
       velocity="4" />
   </joint>
+
+
 
 
   <joint name="pinky_1_joint" type="revolute">
